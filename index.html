@@ -3,9 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./resources/css/style.css" rel="stylesheet" />
     <title>CheatSheetProject</title>
 </head>
 <body>
-    
+    <h1>HTML Layout Related Elements</h1>
+    <h2>Properties and Values</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 10%;">Property</th>
+                <th style="width: 10%;">Value</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="code">position:</span></td>
+                <td><span class="code">static</span></td>
+                <td>The element is positioned according to the normal flow of the document. The <span class="code">top</span>, <span class="code">right</span>, <span class="code">bottom</span>, <span class="code">left</span>, and <span class="code">z-index</span> properties have no effect. This is the default value.</td>
+            </tr>
+            <tr>
+                <td><span class="code">position:</span></td>
+                <td><span class="code">relative</span></td>
+                <td>The element is positioned according to the normal flow of the document, and then offset relative to itself based on the values of <span class="code">top</span>, <span class="code">right</span>, <span class="code">bottome</span>, and <span class="code">left</span>. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were <span class="code">static</span>. This value creates a new stacking context when the value of <span class="code">z-index</span> is not auto. Its effect on <span class="code">table-*-group</span>, <span class="code">table-row</span>, <span class="code">table-column</span>, <span class="code">table-cell</span>, and <span class="code">table-caption</span> elements is undefined.</td>
+            </tr>
+            <tr>
+                <td><span class="code">position:</span></td>
+                <td><span class="code">absolute</span></td>
+                <td>The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its closest positioned ancestor (if any) or to the initial containing block. Its final position is determined by the values of <span class="code">top</span>, <span class="code">right</span>, <span class="code">bottom</span>, and <span class="code">left</span>. This value creates a new stacking context when the value of <span class="code">z-index</span> is not auto. The margins of absolutely positioned boxes do not collapse with other margins.</td>
+            </tr>
+            <tr>
+                <td><span class="code">position:</span></td>
+                <td><span class="code">fixed</span></td>
+                <td>The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its initial containing block, which is the viewport in the case of visual media. Its final position is determined by the values of <span class="code">top</span>, <span class="code">right</span>, <span class="code">bottom</span>, and <span class="code">left</span>. This value always creates a new stacking context. In printed documents, the element is placed in the same position on every page.</td>
+            </tr>
+            <tr>
+                <td><span class="code">z-index:</span></td>
+                <td><span class="code">&ltinteger&gt</number></span></td>
+                <td>The <span class="code">z-index</span> CSS property sets the z-order of a positioned element and its descendants or flex and grid items. Overlapping elements with a larger z-index cover those with a smaller one.</td>
+            </tr>
+            <tr>
+                <td><span class="code">float:</span></td>
+                <td><span class="code">&ltvalue&gt</span></td>
+                <td>The <span class="code">float</span> CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow (in contrast to absolute positioning).</td>
+            </tr>
+            <tr>
+                <td><span class="code">clear:</span></td>
+                <td><span class="code">&ltvalue&gt</span></td>
+                <td>The <span class="code">clear</span> CSS property sets whether an element must be moved below (cleared) floating elements that precede it. The clear property applies to floating and non-floating elements.</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Float Values</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 12%">Value</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="code">left</span></td>
+                <td>The element must float on the left side of its containing block.</td>
+            </tr>
+            <tr>
+                <td><span class="code">right</span></td>
+                <td>The element must float on the right side of its containing block.</td>
+            </tr>
+            <tr>
+                <td><span class="code">none</span></td>
+                <td>The element must not float.</td>
+            </tr>
+            <tr>
+                <td><span class="code">inline-start</span></td>
+                <td>The element must float on the start side of its containing block. That is the left side with <span class="code">ltr</span> scripts, and the right side with <span class="code">rtl</span> scripts.</td>
+            </tr>
+            <tr>
+                <td><span class="code">inline-end</span></td>
+                <td>The element must float on the end side of its containing block. That is the right side with <span class="code">ltr</span> scripts, and the left side with <span class="code">rtl</span> scripts.</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Clear Values</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 12%">Value</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="code">none</span></td>
+                <td>Is a keyword indicating that the element is not moved down to clear past floating elements.</td>
+            </tr>
+            <tr>
+                <td><span class="code">left</span></td>
+                <td>Is a keyword indicating that the element is moved down to clear past left floats.</td>
+            </tr>
+            <tr>
+                <td><span class="code">right</span></td>
+                <td>Is a keyword indicating that the element is moved down to clear past right floats.</td>
+            </tr>
+            <tr>
+                <td><span class="code">both</span></td>
+                <td>Is a keyword indicating that the element is moved down to clear past both left and right floats.</td>
+            </tr>
+            <tr>
+                <td><span class="code">inline-start</span></td>
+                <td>Is a keyword indicating that the element is moved down to clear floats on start side of its containing block, that is the left floats on <span class="code">ltr</span> scripts and the right floats on <span class="code">rtl</span> scripts.</td>
+            </tr>
+            <tr>
+                <td><span class="code">inline-end</span></td>
+                <td>Is a keyword indicating that the element is moved down to clear floats on end side of its containing block, that is the right floats with <span class="code">ltr</span> scripts, and the left floats with <span class="code">rtl</span> scripts.</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <p id="signature">Created by Paul Asselin (with styling from Codecademy!)<span>٩(◕‿◕｡)۶</span></p>
 </body>
 </html>
